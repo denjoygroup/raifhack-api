@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/denjoy/raifhack-api.git"
+    "url": "git+https://gitlab.com/smartvend/raifhack-api.git"
   },
   "author": "smartvend",
   "license": "ISC",
   "bugs": {
-    "url": "https://gitlab.com/denjoy/raifhack-api/issues"
+    "url": "https://gitlab.com/smartvend/raifhack-api/issues"
   },
-  "homepage": "https://gitlab.com/denjoy/raifhack-api#readme"
+  "homepage": "https://gitlab.com/smartvend/raifhack-api#readme"
 }
