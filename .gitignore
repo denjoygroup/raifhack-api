@@ -4,3 +4,5 @@ dist
 .DS_Store
 .pm2
 package-lock.json
+.env
+.env.test

@@ -4,6 +4,7 @@
   "description": "API for raifhack-hardware",
   "main": "index.js",
   "scripts": {
+    "watch": "NODE_ENV=development nodemon --watch src src/index.ts",
     "test": "test"
   },
   "repository": {
