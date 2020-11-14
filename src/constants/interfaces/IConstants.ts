@@ -1,3 +1,7 @@
 export default interface IConstants {
-    port: number
+    port: number,
+    sbp: {
+        key: string,
+        merchant: string
+    }
 }

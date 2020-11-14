@@ -20,8 +20,8 @@ export default function saleControllerFactory(container: Container) {
         @httpGet('/test')
         async test(req: express.Request, res: express.Response, next: express.NextFunction) {
             try {
-                await this._saleBusiness.test();
-                res.send({data: 'hello raif'})
+                const result = await this._saleBusiness.test();
+                res.send(result);
             } catch (e) {
                 res.send(e);
             }

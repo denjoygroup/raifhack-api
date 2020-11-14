@@ -23,5 +23,9 @@ dotenv.config({path: pathToEnv});
 
 @injectable()
 export default class Constants implements IConstants {
-    port: number = parseInt(process.env.PORT!)
+    port: number = parseInt(process.env.PORT!);
+    sbp = {
+        key: process.env.SBP_KEY!,
+        merchant: process.env.SBP_MERCHANT!
+    }
 }
