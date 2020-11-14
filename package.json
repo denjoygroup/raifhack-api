@@ -1,0 +1,19 @@
+{
+  "name": "raifhack-api",
+  "version": "0.0.0",
+  "description": "API for raifhack-hardware",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/denjoy/raifhack-api.git"
+  },
+  "author": "smartvend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/denjoy/raifhack-api/issues"
+  },
+  "homepage": "https://gitlab.com/denjoy/raifhack-api#readme"
+}
