@@ -30,10 +30,10 @@ export default class SaleBusiness implements ISaleBusiness {
             response.tid = result.transactionId;
             response.active = true;
         } else {
-            result.active = false;
-            result.tid = null;
+            response.active = false;
+            response.tid = null;
         }
-        return result;
+        return response;
     }
 
 }
