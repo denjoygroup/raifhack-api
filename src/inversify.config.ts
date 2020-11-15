@@ -8,6 +8,7 @@ import PgClient from "./app/dataAccess/pg/client";
 import { Connection } from "typeorm";
 import IProviderPgConnection from "./app/dataAccess/pg/interfaces/IProviderPgConnection";
 import SaleRepository from "./app/repositories/SaleRepository";
+import QrBusiness from "./app/business/QrBusiness";
 
 
 let container = new Container();
@@ -36,6 +37,7 @@ container.bind(Types.Constants).to(Constants).inSingletonScope();
  * Business
  */
 container.bind(Types.SaleBusiness).to(SaleBusiness).inSingletonScope();
+container.bind(Types.QrBusiness).to(QrBusiness).inSingletonScope();
 
 
 /**

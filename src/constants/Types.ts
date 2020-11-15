@@ -16,6 +16,7 @@ const Types = {
      * Business
      */
     SaleBusiness: Symbol.for('SaleBusiness'),
+    QrBusiness: Symbol.for('QrBusiness'),
 
     /**
      * Services

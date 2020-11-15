@@ -26,6 +26,36 @@ export default function saleControllerFactory(container: Container) {
                 res.send(e);
             }
         }
+
+        @httpGet('/index')
+        async index(req: express.Request, res: express.Response, next: express.NextFunction) {
+            try {
+                const result = await this._saleBusiness.index();
+                res.send(result);
+            } catch (e) {
+                res.send(e);
+            }
+        }
+
+        @httpGet('/total')
+        async total(req: express.Request, res: express.Response, next: express.NextFunction) {
+            try {
+                const result = await this._saleBusiness.getTotal();
+                res.send(result);
+            } catch (e) {
+                res.send(e);
+            }
+        }
+
+        @httpGet('/getByHours')
+        async getByHours(req: express.Request, res: express.Response, next: express.NextFunction) {
+            try {
+                const result = await this._saleBusiness.getByHours();
+                res.send(result);
+            } catch (e) {
+                res.send(e);
+            }
+        }
     }
 
 

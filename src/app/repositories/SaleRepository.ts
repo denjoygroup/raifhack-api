@@ -21,4 +21,15 @@ export default class SaleRepository extends BaseRepository<Sale> implements ISal
         return connection.getRepository(Sale);
     }
 
+
+    async create(sale: Sale) {
+        let repository = await this.getRepository();
+        return await repository.save(sale);
+    }
+
+    async find() {
+        let repository = await this.getRepository();
+        return repository.find();
+    }
+
 }
