@@ -41,7 +41,7 @@ export default function saleControllerFactory(container: Container) {
         async total(req: express.Request, res: express.Response, next: express.NextFunction) {
             try {
                 const result = await this._saleBusiness.getTotal();
-                res.send(result);
+                res.send({total: result});
             } catch (e) {
                 res.send(e);
             }

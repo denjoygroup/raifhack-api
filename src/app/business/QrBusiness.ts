@@ -4,6 +4,8 @@ import IHandlerService from "../../services/interfaces/IHandlerService";
 import IQrBusiness from "./interfaces/IQrBusiness";
 import IConstants from "../../constants/interfaces/IConstants";
 import { QrInfo } from '../../constants/utils';
+import url from 'url';
+import querystring from 'querystring';
 
 
 // type QrInfo = {
@@ -27,7 +29,18 @@ export default class QrBusiness implements IQrBusiness {
 
     async getLastQrInfo() {
         if (!this.lastQrInfo) await this.getLastQrInfoFromApi('AS96FF6B1D2D42F281D898E57CE64252');
+        if (this.lastQrInfo) this.getValueFromQrPayload(this.lastQrInfo.payload);
         return this.lastQrInfo;
+    }
+
+    getValueFromQrPayload(payload: string) {
+        let parsedUrl = url.parse(payload);
+        if (!parsedUrl.query) return;
+        let query = querystring.parse(parsedUrl.query);
+        if (!query.sum || typeof query.sum !== 'string') return;
+        let sum = parseInt(query.sum);
+        if (!Number.isFinite(sum)) return;
+        this.value = sum;
     }
 
     async createQr(value: number) {
