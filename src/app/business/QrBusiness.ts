@@ -30,7 +30,7 @@ export default class QrBusiness implements IQrBusiness {
     async getLastQrInfo() {
         if (!this.lastQrInfo) await this.getLastQrInfoFromApi('AS96FF6B1D2D42F281D898E57CE64252');
         if (this.lastQrInfo) this.getValueFromQrPayload(this.lastQrInfo.payload);
-        return this.lastQrInfo;
+        return {lastQrInfo: this.lastQrInfo, value: this.value};
     }
 
     getValueFromQrPayload(payload: string) {
