@@ -6,6 +6,7 @@ import IConstants from "./constants/interfaces/IConstants";
 import Types from './constants/Types';
 import saleControllerFactory from "./app/controllers/SaleController";
 import PgClient from "./app/dataAccess/pg/client";
+import qrControllerFactory from "./app/controllers/QrController";
 
 
 const pgClient = container.get<PgClient>(Types.PgClient);
@@ -30,6 +31,7 @@ const constants = container.get<IConstants>(Types.Constants);
     }
 
     saleControllerFactory(container);
+    qrControllerFactory(container);
 
     const server = new InversifyExpressServer(container, null, { rootPath: "/api/v1" });
     server.setConfig((app) => {
