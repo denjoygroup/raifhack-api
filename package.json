@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "watch": "NODE_ENV=development nodemon --watch src src/index.ts",
+    "start:prod": "NODE_ENV=development node dist/index.js",
+    "build": "tsc -p .",
     "test": "test"
   },
   "repository": {
@@ -14,9 +16,9 @@
   "devDependencies": {
     "@types/bluebird": "^3.5.32",
     "@types/compression": "^1.7.0",
-    "@types/connect-redis": "0.0.13",
+    "@types/connect-redis": "0.0.15",
     "@types/express": "^4.17.4",
-    "@types/express-session": "^1.17.0",
+    "@types/express-session": "^1.17.2",
     "@types/mocha": "^7.0.2",
     "@types/multer": "^1.4.4",
     "@types/node": "^13.9.8",
@@ -37,10 +39,10 @@
     "class-transformer": "^0.2.3",
     "class-validator": "^0.12.2",
     "compression": "^1.7.4",
-    "connect-redis": "^4.0.4",
+    "connect-redis": "^5.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-session": "^1.17.0",
+    "express-session": "^1.17.1",
     "inversify": "^5.0.1",
     "inversify-express-utils": "^6.3.2",
     "moment-timezone": "^0.5.31",

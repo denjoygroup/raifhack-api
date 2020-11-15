@@ -1,10 +1,7 @@
-import { inject, injectable } from "inversify";
+import { injectable } from "inversify";
+import { EntityTarget } from 'typeorm';
 import IProviderPgConnection from "../../dataAccess/pg/interfaces/IProviderPgConnection";
-import Types from "../../../constants/Types";
 import IBaseRepository from './interfaces/IBaseRepository';
-import { EntitySchema, Entity, ObjectType, EntityTarget } from 'typeorm';
-import IQueryOptions from "../../../constants/interfaces/IQueryOptions";
-import IFilterOptions from "../../../constants/interfaces/IFilterOptions";
 
 @injectable()
 export default class BaseRepository<T> implements IBaseRepository<T> {
@@ -30,28 +27,4 @@ export default class BaseRepository<T> implements IBaseRepository<T> {
     const repository = await this.getRepository();
     await repository.delete(id);
   }
-  async findOne(options: IQueryOptions<T>) {
-    const repository = await this.getRepository();
-    return await repository.findOne(options.fullOptions);
-  }
-  async find(options: IQueryOptions<T>) {
-    const repository = await this.getRepository();
-    return await repository.find(options.fullOptions);
-  }
-
-  async count(options: IFilterOptions<T>) {
-    const repository = await this.getRepository();
-    return await repository.count(options);
-  }
-
-  async findOrCreate(options: IQueryOptions<T>, itemToCreate: Partial<T>) {
-    const repository = await this.getRepository();
-    let item = await repository.findOne(options.filtersOptions);
-    if (!item) {
-        item = new this.model();
-        Object.assign(item, itemToCreate);
-        await repository.save(item);
-    }
-    return item;
-}
 }
