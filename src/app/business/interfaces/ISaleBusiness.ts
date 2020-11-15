@@ -5,5 +5,5 @@ export default interface ISaleBusiness {
     index(): Promise<Sale[]>;
     getTotal(): Promise<number>;
     getByHours(): Promise<{total: number, label: string}[]>;
-    generateSales(): Promise<void>;
+    // generateSales(): Promise<void>;
 }

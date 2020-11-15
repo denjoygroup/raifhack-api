@@ -56,15 +56,15 @@ export default function saleControllerFactory(container: Container) {
                 res.send(e);
             }
         }
-        @httpGet('/generateSales')
-        async generateSales(req: express.Request, res: express.Response, next: express.NextFunction) {
-            try {
-                const result = await this._saleBusiness.generateSales();
-                res.send(result);
-            } catch (e) {
-                res.send(e);
-            }
-        }
+        // @httpGet('/generateSales')
+        // async generateSales(req: express.Request, res: express.Response, next: express.NextFunction) {
+        //     try {
+        //         const result = await this._saleBusiness.generateSales();
+        //         res.send(result);
+        //     } catch (e) {
+        //         res.send(e);
+        //     }
+        // }
     }
 
 
