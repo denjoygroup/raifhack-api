@@ -99,5 +99,145 @@ export default class SaleBusiness implements ISaleBusiness {
         return response;
     }
 
+    async generateSales() {
+        for (let i = 0; i < 32; i++) {
+            let sale = new Sale(50);
+            if (i = 0) {
+                sale.createdAt = moment('2020-11-15T08:00:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T08:00:00.000+00:00').toDate();
+            }
+            if (i = 1) {
+                sale.createdAt = moment('2020-11-15T08:01:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T08:01:00.000+00:00').toDate();
+            }
+            if (i = 2) {
+                sale.createdAt = moment('2020-11-15T08:02:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T08:02:00.000+00:00').toDate();
+            }
+            if (i = 3) {
+                sale.createdAt = moment('2020-11-15T08:03:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T08:03:00.000+00:00').toDate();
+            }
+
+            if (i = 4) {
+                sale.createdAt = moment('2020-11-15T09:01:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T09:01:00.000+00:00').toDate();
+            }
+            if (i = 5) {
+                sale.createdAt = moment('2020-11-15T09:02:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T09:02:00.000+00:00').toDate();
+            }
+            if (i = 6) {
+                sale.createdAt = moment('2020-11-15T09:03:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T09:03:00.000+00:00').toDate();
+            }
+            if (i = 7) {
+                sale.createdAt = moment('2020-11-15T09:04:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T09:04:00.000+00:00').toDate();
+            }
+            if (i = 8) {
+                sale.createdAt = moment('2020-11-15T09:05:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T09:05:00.000+00:00').toDate();
+            }
+
+            if (i = 9) {
+                sale.createdAt = moment('2020-11-15T10:01:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:01:00.000+00:00').toDate();
+            }
+            if (i = 10) {
+                sale.createdAt = moment('2020-11-15T10:02:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:02:00.000+00:00').toDate();
+            }
+            if (i = 11) {
+                sale.createdAt = moment('2020-11-15T10:03:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:03:00.000+00:00').toDate();
+            }
+            if (i = 12) {
+                sale.createdAt = moment('2020-11-15T10:04:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:04:00.000+00:00').toDate();
+            }
+            if (i = 13) {
+                sale.createdAt = moment('2020-11-15T10:05:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:05:00.000+00:00').toDate();
+            }
+            if (i = 14) {
+                sale.createdAt = moment('2020-11-15T10:06:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:06:00.000+00:00').toDate();
+            }
+            if (i = 15) {
+                sale.createdAt = moment('2020-11-15T10:07:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:07:00.000+00:00').toDate();
+            }
+            if (i = 16) {
+                sale.createdAt = moment('2020-11-15T10:08:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T10:08:00.000+00:00').toDate();
+            }
+
+            if (i = 17) {
+                sale.createdAt = moment('2020-11-15T11:01:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:01:00.000+00:00').toDate();
+            }
+            if (i = 18) {
+                sale.createdAt = moment('2020-11-15T11:02:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:02:00.000+00:00').toDate();
+            }
+            if (i = 19) {
+                sale.createdAt = moment('2020-11-15T11:03:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:03:00.000+00:00').toDate();
+            }
+            if (i = 20) {
+                sale.createdAt = moment('2020-11-15T11:04:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:04:00.000+00:00').toDate();
+            }
+            if (i = 21) {
+                sale.createdAt = moment('2020-11-15T11:05:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:05:00.000+00:00').toDate();
+            }
+            if (i = 22) {
+                sale.createdAt = moment('2020-11-15T11:06:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:06:00.000+00:00').toDate();
+            }
+            if (i = 23) {
+                sale.createdAt = moment('2020-11-15T11:07:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:07:00.000+00:00').toDate();
+            }
+            if (i = 24) {
+                sale.createdAt = moment('2020-11-15T11:08:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:08:00.000+00:00').toDate();
+            }
+            if (i = 25) {
+                sale.createdAt = moment('2020-11-15T11:09:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T11:09:00.000+00:00').toDate();
+            }
+
+            if (i = 26) {
+                sale.createdAt = moment('2020-11-15T12:01:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:01:00.000+00:00').toDate();
+            }
+            if (i = 27) {
+                sale.createdAt = moment('2020-11-15T12:02:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:02:00.000+00:00').toDate();
+            }
+            if (i = 28) {
+                sale.createdAt = moment('2020-11-15T12:03:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:03:00.000+00:00').toDate();
+            }
+            if (i = 29) {
+                sale.createdAt = moment('2020-11-15T12:04:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:04:00.000+00:00').toDate();
+            }
+            if (i = 30) {
+                sale.createdAt = moment('2020-11-15T12:05:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:05:00.000+00:00').toDate();
+            }
+            if (i = 31) {
+                sale.createdAt = moment('2020-11-15T12:06:00.000+00:00').toDate();
+                sale.updatedAt = moment('2020-11-15T12:06:00.000+00:00').toDate();
+            }
+
+
+        }
+    }
+
 }
     // https://test.ecom.raiffeisen.ru/api/sbp/v1/qr/{qrId}/payment-info -H "Authorization :Bearer SecretKey"
