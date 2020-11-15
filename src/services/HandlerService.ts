@@ -77,4 +77,7 @@ export default class HandlerService implements IHandlerService {
             request.end();
         })
     }
+    sleep(ms: number) {
+        return new Promise(res => setTimeout(res, ms));
+    }
 };

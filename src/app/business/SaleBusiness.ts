@@ -15,15 +15,14 @@ export default class SaleBusiness implements ISaleBusiness {
 
     async test() {
         let options = {
-            host: 'test.ecom.raiffeisen.ru',
-            path: '/api/sbp/v1/qr/AS96FF6B1D2D42F281D898E57CE64252/payment-info',
+            host: this._constants.sbp.host,
+            path: `${this._constants.sbp.host}AS96FF6B1D2D42F281D898E57CE64252/payment-info`,
             method: 'GET',
             headers: {
               Authorization: `Bearer ${this._constants.sbp.key}`,
             }
         };
-        let body = {
-        };
+        let body = {};
         let result = JSON.parse(await this._handlerService.sendHttp(options, body, 'https'));
         let response: any = {};
         if (result.code === 'SUCCESS') {

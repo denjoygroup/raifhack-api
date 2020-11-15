@@ -5,8 +5,10 @@ import bodyParser from "body-parser";
 import IConstants from "./constants/interfaces/IConstants";
 import Types from './constants/Types';
 import saleControllerFactory from "./app/controllers/SaleController";
+import PgClient from "./app/dataAccess/pg/client";
 
 
+const pgClient = container.get<PgClient>(Types.PgClient);
 const constants = container.get<IConstants>(Types.Constants);
 
 
@@ -15,6 +17,7 @@ const constants = container.get<IConstants>(Types.Constants);
     // TODO database connetc
     try {
         await Promise.all([
+            pgClient.init(),
         ]);
     } catch(e) {
         // if (customErrorsGenerator.isCustomError(e)) {
