@@ -43,7 +43,7 @@ export default class SaleBusiness implements ISaleBusiness {
 
     private generateLabels() {
         let labelsMap = new Map<string, {label: string, total: number}>();
-        for (let i = 24; i > 0; i--) {
+        for (let i = 23; i >= 0; i--) {
             let label = moment().subtract(i, 'hours').format('YYYY-MM-DD HH');
             labelsMap.set(label, {label, total: 0});
         }
