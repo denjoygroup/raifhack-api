@@ -235,7 +235,7 @@ export default class SaleBusiness implements ISaleBusiness {
                 sale.updatedAt = moment('2020-11-15T12:06:00.000+00:00').toDate();
             }
 
-
+            await this._saleRepository.create(sale);
         }
     }
 
